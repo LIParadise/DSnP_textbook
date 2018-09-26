@@ -1,0 +1,1 @@
+a good practice is to manipulate screen text along with _readBufPtr inside moveBufPtr();
