@@ -1,0 +1,16 @@
+for class ckt manager:
+input list, output list, float/undef list.
+
+there are several gate types, could consider using inheritance:
+const values, primary input/output, general AIG, ...;
+
+the gate types may not all have something in common, e.g. fan-in information:
+where this gate eat input, and whether we want it inverted, and PI and const values
+dont need this data field.
+
+"something it's necessary to reconstruct."
+
+it's recommended that we contruct all points first, and then connections.
+
+"circuit processing":
+DFS list, undef list, floating list.
