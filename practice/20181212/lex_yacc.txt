@@ -1,0 +1,12 @@
+lex:
+token-ize the file.
+common tool: flex
+
+yacc:
+defining syntax rules.
+common tool: bison
+
+remark:
+actually not all "computer language" are so well defined...
+eg: verilog
+that is, interpretation differs when using different compilers.
