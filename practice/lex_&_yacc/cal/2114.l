@@ -4,9 +4,13 @@
 using namespace std;
 static int lineno = 1;
 %}
-LINE .*\n
+
+LINE [^-].*\n
+NLINE [-].*\n
+
 %%
-{LINE} { cout << setw(5) << lineno ++ << " " << yytext; }
+{LINE}  { cout << setw(5) << lineno ++ << " " << yytext; }
+{NLINE} { cout << setw(5) << lineno -- << " " << yytext; }
 %%
 
 int main(){
