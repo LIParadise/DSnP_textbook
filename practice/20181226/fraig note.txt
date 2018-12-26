@@ -1,0 +1,16 @@
+some notes:
+-- trade-off:
+     given a ckt, from PI to prove -> divide-and-counter the whole circuit, but take time.
+                  from PO to prove -> benefitial to this project, since some circuit is 
+                                      just an xor to exactly the same ckt. Just one SAT run
+                                      would simpilify this whole ckt to just one gate.
+-- SAT:
+     SAT engine would learn some facts.
+     Given an FEC group with many gates, it's very possible that the given two gate in the
+     group we want to test if they are the same have many AAG that's exactly the same. Thus 
+     we don't want to destroy the SAT model when testing given group.
+-- misc:
+     -- it's preferable that we build an DFS list from PI to PO to run FRAIG.
+     -- when running FRAIG, we may want to merge the ckt when discovered they are exactly 
+        the same, or we may want to merge later. Since we need to modify some list.
+     -- we may want to set an limit when trying to merge two gate in some FEC.
